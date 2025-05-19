@@ -1,0 +1,78 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    background-color: #0D0E11; /* Primary Background (Deep Charcoal) */
+    color: #E0E0E0; /* Primary Text (Off-White) */
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .pill-tag {
+    @apply bg-surface text-text-primary border border-primary/30 px-4 py-1 rounded-full text-sm font-medium inline-flex items-center;
+  }
+  
+  .card {
+    @apply bg-surface rounded-lg p-6 shadow-card transition-all duration-300;
+  }
+  
+  .card:hover {
+    @apply shadow-glow transform -translate-y-1;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-text-primary px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-primary/90;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface text-text-primary border border-border px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:border-primary;
+  }
+  
+  .btn-accent {
+    @apply bg-accent text-background px-6 py-3 rounded-lg font-medium transition-all duration-300 hover:bg-accent/90;
+  }
+}
+
+@layer utilities {
+  /* Enhanced gradient animations */
+  @keyframes bg-pan {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+  }
+  
+  .animate-bg-pan {
+    animation: bg-pan 25s linear infinite;
+  }
+  
+  /* Hero section gradient utilities */
+  .hero-gradient {
+    background: radial-gradient(circle at 50% 50%, rgba(112, 0, 255, 0.15), rgba(13, 14, 17, 0) 70%);
+  }
+  
+  .hero-gradient-2 {
+    background: radial-gradient(circle at 30% 70%, rgba(112, 0, 255, 0.1), rgba(13, 14, 17, 0) 60%);
+  }
+  
+  .hero-gradient-3 {
+    background: radial-gradient(circle at 70% 30%, rgba(0, 201, 183, 0.05), rgba(13, 14, 17, 0) 50%);
+  }
+  
+  /* Fade-in animation for scroll reveal */
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.6s ease-out forwards;
+  }
+}
