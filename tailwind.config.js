@@ -33,6 +33,7 @@ export default {content: [
       animation: {
         'gradient-shift': 'gradient-shift 15s ease infinite alternate',
         'pulse-glow': 'pulse-glow 8s ease-in-out infinite',
+        'float-around': 'float-around 20s ease-in-out infinite alternate',
       },
       keyframes: {
         'gradient-shift': {
@@ -42,6 +43,13 @@ export default {content: [
         'pulse-glow': {
           '0%, 100%': { opacity: 0.5 },
           '50%': { opacity: 0.9 },
+        },
+        'float-around': {
+          '0%': { transform: 'translate(0, 0)' },
+          '25%': { transform: 'translate(5%, -5%)' },
+          '50%': { transform: 'translate(-5%, 5%)' },
+          '75%': { transform: 'translate(-5%, -5%)' },
+          '100%': { transform: 'translate(5%, 5%)' },
         },
       },
     },

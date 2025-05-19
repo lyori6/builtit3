@@ -37,6 +37,31 @@
 }
 
 @layer utilities {
+  /* Animated gradient background for hero section */
+  .gradient-background {
+    background: linear-gradient(300deg, #00C9B7, #4F46E5, #18B2DE, #00C9B7);
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+
+  /* Apple-like subtle gradient animation */
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    25% {
+      background-position: 25% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    75% {
+      background-position: 75% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
   /* Enhanced gradient animations */
   @keyframes bg-pan {
     0% { background-position: 0% 0%; }

@@ -11,7 +11,7 @@ import { TestimonialsSection } from './components/TestimonialsSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 export function App() {
-  return <div className="bg-[#0D0E11] text-[#E0E0E0] min-h-screen w-full overflow-x-hidden">
+  return <div className="bg-[#0D0E11] text-[#E0E0E0] min-h-screen w-full overflow-x-hidden pt-16">
       <Navbar />
       <HeroSection />
       <WhatIsSection />
